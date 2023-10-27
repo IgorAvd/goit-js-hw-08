@@ -13,6 +13,5 @@ function handleTimeUpdate(evt) {
 }
 
 const targetTime =
-  parseFloat(localStorage.getItem('videoplayer-current-time')) ?? 0;
-
+  parseFloat(localStorage.getItem('videoplayer-current-time')) || 0;
 player.setCurrentTime(targetTime);
