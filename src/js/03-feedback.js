@@ -15,11 +15,11 @@ function onFormInput(evt) {
   };
 
   localStorage.setItem('feedback-form-state', JSON.stringify(inputValue));
-  localStorageValue = JSON.parse(localStorage.getItem('feedback-form-state'));
-  if (localStorageValue) {
-    formEl.elements.email.value = localStorageValue.email;
-    formEl.elements.message.value = localStorageValue.message;
-  }
+}
+localStorageValue = JSON.parse(localStorage.getItem('feedback-form-state'));
+if (localStorageValue) {
+  formEl.elements.email.value = localStorageValue.email;
+  formEl.elements.message.value = localStorageValue.message;
 }
 
 function onFormSubmit(evt) {
